@@ -1,13 +1,17 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image, ImageBackground, Button } from 'react-native';
+import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+import { Button } from 'react-native-paper';
+import { Checkbox } from 'react-native-paper';
+
 
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
-export default function Main () {
+export default function Login () {
+    const [checked, setChecked] = React.useState(false);
 
   return (
     <View style={styles.container}>
@@ -33,10 +37,19 @@ export default function Main () {
         placeholderTextColor = '#a8c5ff'
         style={styles.input2}/>
     </View>
-      <View >
-      <TouchableOpacity>
-          <Text style={styles.login}> login </Text> 
-          </TouchableOpacity>
+    <View>
+    <Checkbox.Android style={styles.checkbox}
+      status={checked ? 'checked' : 'unchecked'}
+      onPress={() => {
+        setChecked(!checked);
+      }}
+    />
+    </View>
+    <View >
+         <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 128, marginTop: -580}}
+  mode="contained" onPress={() => console.log('Pressed')}>
+            <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Login </Text>
+        </Button>
        
       </View>
     </View>
@@ -61,26 +74,13 @@ const styles = StyleSheet.create({
     height: '50%',
     width: '50%',
     alignSelf: 'center',
+    marginLeft: 8,
   },
 
 
-login : {
-   borderRadius: 100,
-   marginLeft: 130,
-   backgroundColor: '#ece2e1',
-   color:'#354f6b',
-   fontWeight: 'bold',
-   width: 180, 
-   padding: 10,
-   textAlign: 'center',
-   marginTop: -580,
-
-   
-},
-
  input :{
         marginTop: -660,
-        marginLeft: 80,
+        marginLeft: 90,
         margin: 'auto',
         backgroundColor: "white",
         width: 250,
@@ -92,12 +92,17 @@ login : {
     
     input2 : {
         marginTop: -730,
-        marginLeft: 80,
+        marginLeft: 90,
         backgroundColor: 'white',
         width: 250,
         padding: 10,
         borderRadius: 100,
     
+    },
+
+    checkbox : {
+        backgroundColor: 'red',
+        color: 'black',
     }
 
 });

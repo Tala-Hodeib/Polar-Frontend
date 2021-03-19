@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image, ImageBackground, Button } from 'react-native';
+import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+import { Button } from 'react-native-paper';
 
 
 // or any pure javascript modules available in npm
@@ -18,15 +19,18 @@ export default function Main () {
          />
       </View>
       <View >
-      <TouchableOpacity>
-          <Text style={styles.login}> login </Text> 
-          </TouchableOpacity>
+         <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 130, marginTop: -140}}
+  mode="contained" onPress={() => console.log('Pressed')}>
+            <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Login </Text>
+        </Button>
        
       </View>
-      <View>
-        <TouchableOpacity>
-          <Text style={styles.signup}> Sign Up </Text>
-        </TouchableOpacity>
+      <View >
+         <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40,borderRadius: 100, marginLeft: 130,marginTop: -90 }}
+  mode="contained" onPress={() => console.log('Pressed')}>
+            <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Sign Up </Text>
+        </Button>
+       
       </View>
 
     </View>
@@ -47,33 +51,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
-
-
-login : {
-   borderRadius: 100,
-   marginTop: -120,
-   marginLeft: 120,
-   backgroundColor: '#ece2e1',
-   color:'#354f6b',
-   fontWeight: 'bold',
-   width: 180, 
-   padding: 10,
-   textAlign: 'center',
-   
-},
-
-signup : {
-    borderRadius: 100,
-    marginTop: -70,
-    marginLeft: 120,
-    backgroundColor: '#d3e0dc',
-    color:'#354f6b',
-    fontWeight: 'bold',
-    width: 180, 
-    padding: 10,
-    textAlign: 'center',
-
-}
 
 
 });
