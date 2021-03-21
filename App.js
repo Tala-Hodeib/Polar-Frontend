@@ -23,13 +23,14 @@ import More from './src/screens/More/More';
 
 
 
+
 export default function App() {
   return (
     <View style= {styles.container}>
       {/* <Main/> */}
       {/* <Login/> */}
       {/* <Register/> */}
-      {/* <BottomNav/> */}
+      <BottomNav/>
       {/* <Home/> */}
       {/* <ActivitiesMain /> */}
       {/* <ActivityPage1/> */}
@@ -38,7 +39,7 @@ export default function App() {
       {/* <TipPage1/> */}
       {/* <TipPage2/> */}
       {/* <Urgent/> */}
-      <More />
+      {/* <More /> */}
 
 
 

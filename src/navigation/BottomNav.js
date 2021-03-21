@@ -20,7 +20,7 @@ const BottomNav = () => {
     { key: 'activities', title: 'Activities', icon: 'dumbbell' },
     { key: 'tips', title: 'Tips', icon: 'notebook' },
     { key: 'urgent', title: 'Urgent', icon: 'alarm-light-outline' },
-    { key: 'more', title: 'More', icon: 'dots-horizontal-circle-outline' },
+    { key: 'more', title: 'More',icon :'dots-horizontal-circle-outline', },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -34,6 +34,8 @@ const BottomNav = () => {
 
   return (
     <BottomNavigation
+      inactiveColor='#354f6b'
+      activeColor='#6199ca'
       barStyle={{backgroundColor:'#bbe9fb'}}  
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
