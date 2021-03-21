@@ -12,7 +12,8 @@ import ActivityPage2 from './src/screens/Activities/ActivityPage2';
 import TipsMain from './src/screens/Tips/TipsMain';
 import TipPage1 from './src/screens/Tips/TipPage1';
 import TipPage2 from './src/screens/Tips/TipPage2';
-import Urgent from './src/screens/Urgent/Urgent'
+import Urgent from './src/screens/Urgent/Urgent';
+import More from './src/screens/More/More';
 
 
 
@@ -29,7 +30,7 @@ export default function App() {
       {/* <Login/> */}
       {/* <Register/> */}
       {/* <BottomNav/> */}
-      <Home/>
+      {/* <Home/> */}
       {/* <ActivitiesMain /> */}
       {/* <ActivityPage1/> */}
       {/* <ActivityPage2/> */}
@@ -37,6 +38,9 @@ export default function App() {
       {/* <TipPage1/> */}
       {/* <TipPage2/> */}
       {/* <Urgent/> */}
+      <More />
+
+
 
 
 
