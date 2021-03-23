@@ -117,31 +117,24 @@ export default function Home () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+    flex: 1,
     backgroundColor: '#a8c5ff',
-  },
+    },
 
   logo : {
     position: 'absolute',
     width: 380 , 
     height: 380,
-    marginLeft: 20,
+    marginLeft: 50,
     marginTop: 70,
-    opacity: 0.7,
   },
 
   head : {
     fontWeight: 'bold',
     fontSize: 30,
     color : '#354f6b',
-    marginTop: 20,
-    marginBottom: 2,
-    marginStart: -5,
+    marginTop: 55,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
@@ -149,14 +142,16 @@ const styles = StyleSheet.create({
 
   activity : {
     marginTop: 60,
+    marginLeft: 40,
 
   },
  tip1 : {
    marginTop: 30,
+   marginLeft: 40,
  },
 
  tip2: {
-  marginLeft : 200,
+  marginLeft : 240,
   marginTop: -150,
  }
 

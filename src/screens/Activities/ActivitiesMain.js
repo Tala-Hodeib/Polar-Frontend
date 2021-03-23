@@ -97,12 +97,7 @@ export default function ActivitiesMain () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+    flex: 1,
     backgroundColor: '#a8c5ff',
   },
 
@@ -110,14 +105,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 130 , 
     height: 80,
-    marginLeft: 240,
+    marginLeft: 280,
     marginTop: -450,
   },
   logo2 : {
     position: 'absolute',
     width: 130 , 
     height: 80,
-    marginLeft: 220,
+    marginLeft: 260,
     marginTop: -420,
   },
 
@@ -126,9 +121,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
     color : '#ffb6b9',
-    marginTop: 20,
-    marginBottom: 2,
-    marginStart: -5,
+    marginTop: 55,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
@@ -136,11 +130,15 @@ const styles = StyleSheet.create({
 
   activity1 : {
     marginTop: 60,
+    marginLeft: 40,
+
 
   },
 
   activity2 : {
     marginTop : 20,
+    marginLeft: 40,
+
   }
 
 

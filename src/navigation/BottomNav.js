@@ -1,26 +1,33 @@
 import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { View, StyleSheet, Image, ImageBackground } from 'react-native';
+import Home from '../screens/Home/Home';
+import ActivitiesMain from '../screens/Activities/ActivitiesMain';
+import TipsMain from '../screens/Tips/TipsMain';
+import Urgent from '../screens/Urgent/Urgent';
+import More from '../screens/More/More';
 
 
-const HomeRoute = () => <Text>Home</Text>;
 
-const ActivitiesRoute = () => <Text>Activities</Text>;
 
-const TipsRoute = () => <Text>Tips</Text>;
+const HomeRoute = () => <Home/>;
 
-const UrgentRoute = () => <Text>Urgent</Text>;
+const ActivitiesRoute = () => <ActivitiesMain/>;
 
-const MoreRoute = () => <Text>More</Text>;
+const TipsRoute = () => <TipsMain/>;
+
+const UrgentRoute = () => <Urgent/>;
+
+const MoreRoute = () => <More/>;
 
 const BottomNav = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'home', title: 'Home', icon: 'home-outline' },
-    { key: 'activities', title: 'Activities', icon: 'dumbbell' },
-    { key: 'tips', title: 'Tips', icon: 'notebook' },
-    { key: 'urgent', title: 'Urgent', icon: 'alarm-light-outline' },
-    { key: 'more', title: 'More',icon :'dots-horizontal-circle-outline', },
+    { key: 'home', title: 'Home', icon: 'home-outline', function : Home },
+    { key: 'activities', title: 'Activities', icon: 'dumbbell', function: ActivitiesMain },
+    { key: 'tips', title: 'Tips', icon: 'notebook' , function: TipsMain},
+    { key: 'urgent', title: 'Urgent', icon: 'alarm-light-outline', function: Urgent },
+    { key: 'more', title: 'More',icon :'dots-horizontal-circle-outline', function: More},
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -36,7 +43,7 @@ const BottomNav = () => {
     <BottomNavigation
       inactiveColor='#354f6b'
       activeColor='#6199ca'
-      barStyle={{backgroundColor:'#bbe9fb'}}  
+      barStyle={{backgroundColor:'#f5c0c0'}}  
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       renderScene={renderScene}

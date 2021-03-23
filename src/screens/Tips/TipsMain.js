@@ -4,11 +4,14 @@ import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { Button } from 'react-native-paper';
 import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
 export default function TipsMain () {
+
 
   return (
     <View style={styles.container}>
@@ -22,6 +25,7 @@ export default function TipsMain () {
   
        <View style={styles.tip1}>
         <TouchableOpacity
+          onPress={this._onPressButton}       
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -97,12 +101,7 @@ export default function TipsMain () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+    flex: 1,
     backgroundColor: '#a8c5ff',
   },
 
@@ -110,15 +109,15 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 130 , 
     height: 90,
-    marginLeft: 240,
-    marginTop: -440,
+    marginLeft: 300,
+    marginTop: -450,
   },
   logo2 : {
     position: 'absolute',
     width: 130 , 
     height: 90,
-    marginLeft: 220,
-    marginTop: -410,
+    marginLeft: 280,
+    marginTop: -420,
   },
 
 
@@ -126,22 +125,21 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
     color : '#569ee9',
-    marginTop: 20,
-    marginBottom: 2,
-    marginStart: -5,
+    marginTop: 55,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
   },
 
  tip1 : {
-    marginTop: 60,
-
+  marginTop: 60,
+  marginLeft: 40,
   },
 
   tip2 : {
-    marginTop : 20,
-  }
+    marginTop: 20,
+    marginLeft: 40,  }
 
 
 });

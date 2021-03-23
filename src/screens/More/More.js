@@ -48,6 +48,7 @@ export default function More () {
         placeholderTextColor = '#a8c5ff'
        style={styles.input2}/>
        </View>
+      
     </View>
     <View>
       <Icon style ={styles.icon2} name="cogs" size={30} color="#354f6b" />
@@ -68,7 +69,10 @@ export default function More () {
 We provide an app that is yet to be made for this particular disorder, that hopefully would help our users by giving them sections within the app that would help them overcome whatever they are going through.
 </Text>
       </View>
-    
+      <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 245, marginTop: 18}}
+  mode="contained" onPress={() => console.log('Pressed')}>
+            <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Logout </Text>
+        </Button>
     </View>
   );
 }
@@ -165,7 +169,7 @@ notifications : {
     color : '#354f6b',
     fontWeight: 'bold',
     fontFamily: 'Roboto',
-    marginTop: 35,
+    marginTop: 20,
     marginLeft: 42,
 
   },
@@ -176,7 +180,7 @@ notifications : {
 
   abouttxt : {
     marginLeft: 55,
-    marginTop: 5,
+    marginTop: 2,
     color : '#354f6b',
     fontFamily: 'Roboto',
     alignItems: 'center',

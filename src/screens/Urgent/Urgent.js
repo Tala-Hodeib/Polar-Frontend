@@ -44,12 +44,7 @@ export default function Urgent () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+    flex: 1,
     backgroundColor: '#a8c5ff',
   },
 
@@ -57,18 +52,16 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 380 , 
     height: 380,
-    marginLeft: 20,
-    marginTop: 250,
-    opacity: 0.7,
-  },
+    marginLeft: 50,
+    marginTop: 245,
+    },
 
   head : {
     fontWeight: 'bold',
     fontSize: 30,
     color : '#822659',
-    marginTop: 20,
-    marginBottom: 2,
-    marginStart: -5,
+    marginTop: 55,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
@@ -77,7 +70,7 @@ const styles = StyleSheet.create({
   emergency : {
     color : '#822659',
     marginTop : 110,
-    marginLeft: 30,
+    marginLeft: 60,
     fontSize: 25,
     fontWeight: 'bold',
 
@@ -87,11 +80,12 @@ const styles = StyleSheet.create({
       height: 80,
       width: 80,
      marginTop: 150,
-     marginLeft: 150,
+     marginLeft: 180,
   },
 
   description: {
       color: '#822659',
+      marginLeft: 20,
   }
 
 
