@@ -5,16 +5,24 @@ import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
-export default function More () {
+ function More () {
+   
+
+
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  
+    const navigation = useNavigation(); 
 
 
   return (
@@ -70,7 +78,7 @@ We provide an app that is yet to be made for this particular disorder, that hope
 </Text>
       </View>
       <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 245, marginTop: 18}}
-  mode="contained" onPress={() => console.log('Pressed')}>
+  mode="contained" onPress={() => navigation.navigate('Login') }>
             <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Logout </Text>
         </Button>
     </View>
@@ -193,3 +201,4 @@ notifications : {
 
 
 });
+export default More;

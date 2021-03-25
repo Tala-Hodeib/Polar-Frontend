@@ -6,11 +6,16 @@ import { Button } from 'react-native-paper';
 import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
+
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
+import TipPage1 from './TipPage1';
 
 export default function TipsMain () {
+
+  const navigation = useNavigation(); 
 
 
   return (
@@ -25,7 +30,9 @@ export default function TipsMain () {
   
        <View style={styles.tip1}>
         <TouchableOpacity
-          onPress={this._onPressButton}       
+         onPress={() =>
+          navigation.navigate('Tip1')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -53,6 +60,9 @@ export default function TipsMain () {
 
     <View style={styles.tip2}>
         <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('Tip2')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,

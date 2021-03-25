@@ -75,36 +75,33 @@ import TipPage1 from './src/screens/Tips/TipPage1';
 import TipPage2 from './src/screens/Tips/TipPage2';
 import Urgent from './src/screens/Urgent/Urgent';
 import More from './src/screens/More/More';
+import SplashScreen from './src/screens/Splash/SplashScreen';
+
+
 
 
 const Stack = createStackNavigator();
-function App() {
+function App() {  
   return (
       <View style= {styles.container}>
 
     <NavigationContainer>
-
        
 <Stack.Navigator
   screenOptions={{headerShown: false}}>
-  {/* <Stack.Screen name='Main' component={Main}/>
-  <Stack.Screen name='Register' component={Register}/>
-  <Stack.Screen name='Login' component={Login}/> */}
-  <Stack.Screen name="Nav" component={BottomNav} />
+    {/* <Stack.Screen name='Splash' component={SplashScreen}/>
+   <Stack.Screen name='Main' component={Main}/>
+  <Stack.Screen name='Register' component={Register}/> */}
+ <Stack.Screen name='Login' component={Login}/> 
+   <Stack.Screen name="Nav" component={BottomNav} />
+  <Stack.Screen name="Tip1" component={TipPage1} /> 
+  <Stack.Screen name="Tip2" component={TipPage2} /> 
+  <Stack.Screen name="Activity1" component={ActivityPage1} /> 
+  <Stack.Screen name="Activity2" component={ActivityPage2} /> 
+  <Stack.Screen name="More" component={More} />
+
+
 </Stack.Navigator>
-       {/* <Main/> 
-       <Login/>
-      <Register/>
-       <BottomNav/>
-       <Home/> 
-       <ActivitiesMain />
-       <ActivityPage1/> 
-       <ActivityPage2/>
-       <TipsMain/> 
-       <TipPage1/>
-       <TipPage2/>
-        <Urgent/>
-        <More /> */}
 
       </NavigationContainer>
       </View>
@@ -116,4 +113,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#a8c5ff',
   },
 });
+
 export default App;

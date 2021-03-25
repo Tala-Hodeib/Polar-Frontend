@@ -3,12 +3,16 @@ import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
 import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
 export default function Home () {
+  const navigation = useNavigation(); 
+
 
   return (
     <View style={styles.container}>
@@ -16,12 +20,16 @@ export default function Home () {
         <Text style={styles.head}>Home</Text>
       </View>
       <View>
-       
+      <Text style ={styles.description1}>If you want to start a new routine</Text>
+
       </View>
     
   
        <View style={styles.activity}>
         <TouchableOpacity
+         onPress={() =>
+          navigation.navigate('Activity1')
+        }
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -53,9 +61,15 @@ export default function Home () {
         style={styles.logo}
          />
       </View>
+            <View>
+            <Text style ={styles.description2}>If you are having an episode</Text>
 
+            </View>
     <View style={styles.tip1}>
         <TouchableOpacity
+         onPress={() =>
+          navigation.navigate('Tip1')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -83,6 +97,9 @@ export default function Home () {
     
     <View style={styles.tip2}>
         <TouchableOpacity
+         onPress={() =>
+          navigation.navigate('Tip2')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -153,7 +170,18 @@ const styles = StyleSheet.create({
  tip2: {
   marginLeft : 240,
   marginTop: -150,
- }
+ },
+ description2: {
+  color: '#354f6b',
+  marginLeft: 20,
+  marginTop: 30,
+  marginBottom: -15,
+},
+description1: {
+  color: '#354f6b',
+  marginLeft: 20,
+  marginTop: 30,
+    marginBottom: -35,}
 
 
 });

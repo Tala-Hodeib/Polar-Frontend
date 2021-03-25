@@ -6,6 +6,7 @@ import ActivitiesMain from '../screens/Activities/ActivitiesMain';
 import TipsMain from '../screens/Tips/TipsMain';
 import Urgent from '../screens/Urgent/Urgent';
 import More from '../screens/More/More';
+import TipPage1 from '../screens/Tips/TipPage1';
 
 
 
@@ -14,7 +15,8 @@ const HomeRoute = () => <Home/>;
 
 const ActivitiesRoute = () => <ActivitiesMain/>;
 
-const TipsRoute = () => <TipsMain/>;
+const TipsRoute = () => <TipsMain/> ;
+
 
 const UrgentRoute = () => <Urgent/>;
 

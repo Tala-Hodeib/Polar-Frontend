@@ -3,12 +3,15 @@ import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
 export default function ActivitiesMain () {
+  const navigation = useNavigation(); 
+
 
   return (
     <View style={styles.container}>
@@ -16,12 +19,14 @@ export default function ActivitiesMain () {
         <Text style={styles.head}>Activities</Text>
       </View>
       <View>
-       
       </View>
     
   
        <View style={styles.activity1}>
         <TouchableOpacity
+         onPress={() =>
+          navigation.navigate('Activity1')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -49,6 +54,9 @@ export default function ActivitiesMain () {
 
     <View style={styles.activity2}>
         <TouchableOpacity
+         onPress={() =>
+          navigation.navigate('Activity2')
+        } 
           style={{
             backgroundColor: '#FFF',
             height: 150,
@@ -139,7 +147,9 @@ const styles = StyleSheet.create({
     marginTop : 20,
     marginLeft: 40,
 
-  }
+  },
+
+
 
 
 });

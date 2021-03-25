@@ -71,28 +71,22 @@ export default function TipPage2 () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+  flex:1,
     backgroundColor: '#a8c5ff',
-    marginTop: 40,
   },
 
   logo : {
     position: 'absolute',
     width: 130 , 
     height: 90,
-    marginLeft: 240,
+    marginLeft: 300,
     marginTop: -530,
   },
   logo2 : {
     position: 'absolute',
     width: 130 , 
     height: 90,
-    marginLeft: 220,
+    marginLeft: 280,
     marginTop: -500,
   },
 
@@ -101,16 +95,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     color : '#569ee9',
-    marginTop: 30,
+    marginTop: 55,
     marginBottom: 2,
-    marginStart: -5,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
   },
 
   tip2 : {
-    marginLeft : -10,
+    marginLeft : 25,
     marginTop: 60,
 
   },

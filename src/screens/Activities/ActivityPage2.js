@@ -71,14 +71,8 @@ export default function ActivityPage2 () {
 const styles = StyleSheet.create({
 
   container : {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 400,
-    margin: 30,
-    textAlign: 'center',
-    lineHeight: 5,
+    flex: 1,
     backgroundColor: '#a8c5ff',
-    marginTop: 40,
   },
 
   logo : {
@@ -92,8 +86,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 130 , 
     height: 80,
-    marginLeft: 220,
-    marginTop: -500,
+    marginLeft: 270,
+    marginTop: -505,
   },
 
 
@@ -101,16 +95,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     color : '#ffb6b9',
-    marginTop: 30,
+    marginTop: 55,
     marginBottom: 2,
-    marginStart: -5,
+    marginStart: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
   },
 
   activity2 : {
-    marginLeft : -10,
+    marginLeft : 25,
     marginTop: 60,
 
   },
