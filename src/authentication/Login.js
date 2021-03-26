@@ -11,6 +11,7 @@ import { render } from 'react-dom';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import AsyncStorage from '@react-native-community/async-storage';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
  function Login({ navigation }) {
@@ -61,8 +62,8 @@ import AsyncStorage from '@react-native-community/async-storage';
         
         
   return (
-  
-          <View style={styles.container}>
+          <ScrollView keyboardDismissMode="interactive" style={styles.container}>
+          <View >
         <View>
             <Image source= { require ('./Name.jpeg')} style={styles.Name}></Image>
         </View>
@@ -98,39 +99,41 @@ import AsyncStorage from '@react-native-community/async-storage';
     </View>
     </View>
     <View >
-         <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 128, marginTop: -580}}
+         <Button uppercase={false} style ={{backgroundColor: '#cde6f5', width: 180, height:40, borderRadius: 100, marginLeft: 128, marginTop: -400}}
   mode="contained"   onPress={() => navigation.navigate('Nav') } >
             <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Login </Text>
         </Button>
        </View>
       </View>
+      </ScrollView>
   );
 } 
 
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#a8c5ff',
   },
 
   logo : {
-    width: '100%' , 
-    height:'85%',
-    marginLeft: 10,
-    marginTop: -50,
+    width: 430 , 
+    height: 400,
+    marginLeft: 5,
+    marginTop: 110,
   },
  
   Name : {
-    height: '50%',
-    width: '50%',
+    height: 190,
+    width: 190,
     alignSelf: 'center',
     marginLeft: 8,
+    marginTop: 20,
+
   },
 
 
  input :{
-        marginTop: -660,
+        marginTop: -530,
         marginLeft: 90,
         margin: 'auto',
         backgroundColor: "white",
@@ -142,7 +145,7 @@ const styles = StyleSheet.create({
     },
     
     input2 : {
-        marginTop: -730,
+        marginTop: -470,
         marginLeft: 90,
         backgroundColor: 'white',
         width: 250,

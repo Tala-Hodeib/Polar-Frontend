@@ -31,23 +31,26 @@ export default function Home () {
           navigation.navigate('Activity1')
         }
           style={{
+            marginStart: -15,
+            borderRadius: 15,
             backgroundColor: '#FFF',
-            height: 150,
-            width:350,
+            height: 250,
+            width:380,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Activity1.jpeg')}
+            imageStyle = {{borderRadius : 15}}
             style={{
-              height: 150,
-              width: 350,
+              height: 250,
+              width: 380,
               borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
           />
           <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            style={{ marginStart: 10, marginTop: -40, }}>
             <Text style={{ fontSize: 25, color: '#ffb6b9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Activity 1</Text>
@@ -71,23 +74,25 @@ export default function Home () {
           navigation.navigate('Tip1')
         } 
           style={{
+            borderRadius: 15,
             backgroundColor: '#FFF',
-            height: 150,
-            width:150,
+            height: 180,
+            width:180,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Tip1.jpeg')}
             style={{
-              height: 150,
-              width: 150,
+              height: 180,
+              width: 180,
               borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
+            imageStyle = {{borderRadius : 15}}
           />
           <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            style={{marginStart: 10, marginTop: -40, }}>
             <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 1</Text>
@@ -101,23 +106,25 @@ export default function Home () {
           navigation.navigate('Tip2')
         } 
           style={{
+            borderRadius: 15,
             backgroundColor: '#FFF',
-            height: 150,
-            width:150,
+            height: 180,
+            width:180,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Tip2.jpg')}
+            imageStyle = {{borderRadius : 15}}
             style={{
-              height: 150,
-              width: 150,
+              height: 180,
+              width: 180,
               borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
           />
           <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            style={{ marginStart: 10, marginTop: -40, }}>
             <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 2</Text>
@@ -143,44 +150,45 @@ const styles = StyleSheet.create({
     width: 380 , 
     height: 380,
     marginLeft: 50,
-    marginTop: 70,
+    marginTop: 57,
   },
 
   head : {
     fontWeight: 'bold',
     fontSize: 30,
     color : '#354f6b',
-    marginTop: 55,
+    marginTop: 30,
     marginStart: 15,
+    marginBottom: 20,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
   },
 
   activity : {
-    marginTop: 60,
+    marginTop: 50,
     marginLeft: 40,
 
   },
  tip1 : {
-   marginTop: 30,
-   marginLeft: 40,
+   marginTop: 60,
+   marginLeft: 20,
  },
 
  tip2: {
-  marginLeft : 240,
-  marginTop: -150,
+  marginLeft : 230,
+  marginTop: -180,
  },
  description2: {
   color: '#354f6b',
   marginLeft: 20,
-  marginTop: 30,
-  marginBottom: -15,
+  marginTop: 20,
+  marginBottom: -8,
 },
 description1: {
   color: '#354f6b',
   marginLeft: 20,
-  marginTop: 30,
+  marginTop: -15,
     marginBottom: -35,}
 
 
