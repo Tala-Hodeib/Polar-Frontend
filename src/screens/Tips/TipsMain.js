@@ -7,6 +7,8 @@ import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-n
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
+import { ScrollView } from 'react-native-gesture-handler';
+
 
 
 // or any pure javascript modules available in npm
@@ -19,6 +21,8 @@ export default function TipsMain () {
 
 
   return (
+    <ScrollView>
+
     <View style={styles.container}>
        <View>
         <Text style={styles.head}>Tips</Text>
@@ -34,28 +38,31 @@ export default function TipsMain () {
           navigation.navigate('Tip1')
         } 
           style={{
+            borderRadius: 15,
             backgroundColor: '#FFF',
-            height: 150,
-            width:350,
+            height: 250,
+            width:380,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Tip1.jpeg')}
+            imageStyle = {{borderRadius : 15}}
             style={{
-              height: 150,
-              width: 350,
+              height: 250,
+              width: 380,
               borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
           />
-          <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        
+        </TouchableOpacity>
+        <View
+            style={{ flex: 1,}}>
+            <Text style={{ fontSize: 25, color: '#569ee9',marginStart: 10, marginTop: -290, fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 1</Text>
           </View>
-        </TouchableOpacity>
     </View>
 
     <View style={styles.tip2}>
@@ -64,28 +71,32 @@ export default function TipsMain () {
           navigation.navigate('Tip2')
         } 
           style={{
+            borderRadius: 15,
             backgroundColor: '#FFF',
-            height: 150,
-            width:350,
+            height: 250,
+            width:380,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Tip2.jpg')}
+            imageStyle = {{borderRadius : 15}}
+
             style={{
-              height: 150,
-              width: 350,
+              height: 250,
+              width: 380,
               borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
           />
-          <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
+         
+        </TouchableOpacity>
+        <View
+            style={{ flex: 1,  }}>
+            <Text style={{ fontSize: 25, color: '#569ee9',marginStart: 10, marginTop: -290, fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 2</Text>
           </View>
-        </TouchableOpacity>
     </View>
 
     <View>
@@ -104,6 +115,8 @@ export default function TipsMain () {
   
 
     </View>
+    </ScrollView>
+
   );
 }
 
@@ -120,14 +133,14 @@ const styles = StyleSheet.create({
     width: 130 , 
     height: 90,
     marginLeft: 300,
-    marginTop: -450,
+    marginTop: -720,
   },
   logo2 : {
     position: 'absolute',
     width: 130 , 
     height: 90,
     marginLeft: 280,
-    marginTop: -420,
+    marginTop: -700,
   },
 
 
@@ -144,12 +157,14 @@ const styles = StyleSheet.create({
 
  tip1 : {
   marginTop: 60,
-  marginLeft: 40,
+  marginLeft: 25,
   },
 
   tip2 : {
-    marginTop: 20,
-    marginLeft: 40,  }
+    marginTop: 50,
+    marginLeft: 25,  
+    marginBottom:40,
+  }
 
 
 });

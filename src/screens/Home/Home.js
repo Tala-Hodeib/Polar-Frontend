@@ -9,20 +9,24 @@ import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-n
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Home () {
   const navigation = useNavigation(); 
 
 
   return (
+    <ScrollView>
     <View style={styles.container}>
        <View>
         <Text style={styles.head}>Home</Text>
       </View>
+      
       <View>
-      <Text style ={styles.description1}>If you want to start a new routine</Text>
+            <Text style ={styles.description1}>If you want to start a routine</Text>
 
-      </View>
+            </View>
+    
     
   
        <View style={styles.activity}>
@@ -44,7 +48,6 @@ export default function Home () {
             style={{
               height: 250,
               width: 380,
-              borderRadius: 30,
               opacity: 0.6,
               position: 'absolute',
             }}
@@ -68,6 +71,8 @@ export default function Home () {
             <Text style ={styles.description2}>If you are having an episode</Text>
 
             </View>
+
+          <View style={styles.TIPS}>
     <View style={styles.tip1}>
         <TouchableOpacity
          onPress={() =>
@@ -91,13 +96,15 @@ export default function Home () {
             }}
             imageStyle = {{borderRadius : 15}}
           />
-          <View
-            style={{marginStart: 10, marginTop: -40, }}>
-            <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        </TouchableOpacity>
+        <View
+            style={{ marginTop: -120,marginLeft: 190}}>
+            <Text style={{fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 1</Text>
+            <Text style= {{color:'#354f6b', fontWeight: 'bold'}}>Some description here</Text>
+
           </View>
-        </TouchableOpacity>
     </View>
     
     <View style={styles.tip2}>
@@ -123,17 +130,21 @@ export default function Home () {
               position: 'absolute',
             }}
           />
-          <View
-            style={{ marginStart: 10, marginTop: -40, }}>
+        </TouchableOpacity>
+        <View
+            style={{  marginTop: -120,marginLeft: 190 }}>
             <Text style={{ fontSize: 25, color: '#569ee9', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10}}>Tip 2</Text>
+            <Text style= {{color:'#354f6b', fontWeight: 'bold'}}>Some description here</Text>
+
           </View>
-        </TouchableOpacity>
+        </View>
     </View>
 
 
     </View>
+    </ScrollView>
   );
 }
 
@@ -149,7 +160,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 380 , 
     height: 380,
-    marginLeft: 50,
+    marginLeft: 55,
     marginTop: 57,
   },
 
@@ -171,25 +182,41 @@ const styles = StyleSheet.create({
 
   },
  tip1 : {
-   marginTop: 60,
+   marginTop: 20,
    marginLeft: 20,
+   marginBottom: 15,
  },
 
  tip2: {
-  marginLeft : 230,
-  marginTop: -180,
+  marginLeft : -350,
+  marginTop: 220,
+  marginBottom: 100,
  },
  description2: {
   color: '#354f6b',
   marginLeft: 20,
-  marginTop: 20,
-  marginBottom: -8,
+  marginTop: 40,
+  fontWeight: 'bold',
+  fontSize: 15,
+  
 },
 description1: {
   color: '#354f6b',
   marginLeft: 20,
   marginTop: -15,
-    marginBottom: -35,}
+  marginBottom: -35,
+  fontWeight: 'bold',
+  fontSize: 15,
+
+  },
+
+    TIPS : {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+
+   
+
 
 
 });

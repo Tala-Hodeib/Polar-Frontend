@@ -89,9 +89,9 @@ function App() {
        
 <Stack.Navigator
   screenOptions={{headerShown: false}}>
-    {/* <Stack.Screen name='Splash' component={SplashScreen}/>
-   <Stack.Screen name='Main' component={Main}/>
-  <Stack.Screen name='Register' component={Register}/> */}
+ {/* <Stack.Screen name='Splash' component={SplashScreen}/> */}
+ <Stack.Screen name='Main' component={Main}/>
+  <Stack.Screen name='Register' component={Register}/>
  <Stack.Screen name='Login' component={Login}/> 
    <Stack.Screen name="Nav" component={BottomNav} />
   <Stack.Screen name="Tip1" component={TipPage1} /> 
@@ -110,7 +110,6 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#a8c5ff',
   },
 });
 

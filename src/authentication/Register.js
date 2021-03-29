@@ -3,6 +3,10 @@ import { Text, View, StyleSheet, Image, ImageBackground } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { Button } from 'react-native-paper';
+import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 
 
@@ -10,7 +14,9 @@ import { Button } from 'react-native-paper';
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
-export default function Register () {
+export default function Register ({navigation}) {
+
+
 
   return (
     <View style={styles.container}>
@@ -43,7 +49,7 @@ export default function Register () {
     </View>
     <View >
          <Button uppercase={false} style ={{ backgroundColor: '#bbe9fb', width: 180, height:40, borderRadius: 100, marginLeft: 128, marginTop: -510}}
-  mode="contained" onPress={() => console.log('Pressed')}>
+  mode="contained" onPress={() => navigation.navigate('Nav') }>
             <Text   style ={{color: '#354f6b' , fontWeight: 'bold' }}> Sign Up </Text>
         </Button>
        

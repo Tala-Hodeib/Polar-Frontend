@@ -7,48 +7,59 @@ import FontAwesome, { Icon, SolidIcons, RegularIcons, BrandIcons } from 'react-n
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function ActivityPage1 () {
 
   return (
+    <ScrollView>
     <View style={styles.container}>
-       <View>
-        <Text style={styles.head}>Activity 1</Text>
-      </View>
-      <View>
-       
-      </View>
     
   
        <View style={styles.activity1}>
+     
         <ImageBackground
           style={{
+            marginLeft: -30,
             backgroundColor: '#FFF',
-            height: 400,
-            width:390,
+            height: 500,
+            width:450,
             position: 'relative'
           }}>
           <ImageBackground
             source={require('./Activity1.jpeg')}
             style={{
-              height: 400,
-              width: 390,
+              height: 500,
+              width: 500,
               borderRadius: 30,
               opacity: 0.5,
-              position: 'absolute',
+              position: 'relative',
             }}
           />
-          <View
-            style={{ flex: 1 , justifyContent: 'center'}}>
-            <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold',textShadowColor: 'rgba(0, 0, 0, 0.75)',
-  textShadowOffset: {width: -1, height: 1},
-  textShadowRadius: 10}}>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
-          </View>
+           
         </ImageBackground>
+    
     </View>
-
-
     <View>
+    <ImageBackground
+          style={{
+            marginTop: -20,
+            borderRadius : 15,
+            marginLeft: -5,
+            backgroundColor: '#ccddff',
+            height: 300,
+            width:440,
+            position: 'relative'
+          }}> 
+          </ImageBackground>
+          <View>
+         <View><Text style={styles.head}>Activity 1</Text></View> 
+            <Text style={{textAlign: 'center',marginTop: -230,alignItems: 'center',fontSize: 18,marginRight:20, color: '#354f6b', fontWeight: 'bold',}}>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+          </View>
+          </View>
+
+
+    {/* <View>
         <ImageBackground
         source={ require('./cloud.png')}
         style={styles.logo}
@@ -59,11 +70,12 @@ export default function ActivityPage1 () {
         source={ require('./cloud.png')}
         style={styles.logo2}
          />
-      </View>
+      </View> */}
     
   
 
     </View>
+    </ScrollView>
   );
 }
 
@@ -95,16 +107,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     color : '#ffb6b9',
-    marginTop: 55,
-    marginStart: 15,
+    marginTop: -280,
+    marginStart: 35,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
   },
 
   activity1 : {
-    marginLeft : 25,
-    marginTop: 60,
+    marginLeft : 10,
+    marginTop: -20,
 
   },
 
